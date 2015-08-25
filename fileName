@@ -1,0 +1,56 @@
+compress.cpp: In function 'int main(int, const char**)':
+compress.cpp:14:44: error: conversion from 'FILE* {aka _IO_FILE*}' to non-scalar type 'std::ifstream {aka std::basic_ifstream<char>}' requested
+     ifstream inputFile = fopen(argv[1], "r");
+                                            ^
+compress.cpp:16:33: error: invalid user-defined conversion from 'std::ifstream {aka std::basic_ifstream<char>}' to 'FILE* {aka _IO_FILE*}' [-fpermissive]
+     fseek(inputFile, 0, SEEK_END);
+                                 ^
+In file included from /software/common/gcc-4.8.1/include/c++/4.8.1/ios:44:0,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/istream:38,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/fstream:38,
+                 from HCTree.hpp:6,
+                 from compress.cpp:1:
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note: candidate is: std::basic_ios<_CharT, _Traits>::operator void*() const [with _CharT = char; _Traits = std::char_traits<char>] <near match>
+       operator void*() const
+       ^
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note:   no known conversion for implicit 'this' parameter from 'void*' to 'FILE* {aka _IO_FILE*}'
+compress.cpp:17:38: error: invalid user-defined conversion from 'std::ifstream {aka std::basic_ifstream<char>}' to 'FILE* {aka _IO_FILE*}' [-fpermissive]
+     size_t fileSize = ftell(inputFile);
+                                      ^
+In file included from /software/common/gcc-4.8.1/include/c++/4.8.1/ios:44:0,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/istream:38,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/fstream:38,
+                 from HCTree.hpp:6,
+                 from compress.cpp:1:
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note: candidate is: std::basic_ios<_CharT, _Traits>::operator void*() const [with _CharT = char; _Traits = std::char_traits<char>] <near match>
+       operator void*() const
+       ^
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note:   no known conversion for implicit 'this' parameter from 'void*' to 'FILE* {aka _IO_FILE*}'
+compress.cpp:29:34: error: invalid user-defined conversion from 'std::ifstream {aka std::basic_ifstream<char>}' to 'FILE* {aka _IO_FILE*}' [-fpermissive]
+     currentChar = fgetc(inputFile);
+                                  ^
+In file included from /software/common/gcc-4.8.1/include/c++/4.8.1/ios:44:0,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/istream:38,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/fstream:38,
+                 from HCTree.hpp:6,
+                 from compress.cpp:1:
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note: candidate is: std::basic_ios<_CharT, _Traits>::operator void*() const [with _CharT = char; _Traits = std::char_traits<char>] <near match>
+       operator void*() const
+       ^
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note:   no known conversion for implicit 'this' parameter from 'void*' to 'FILE* {aka _IO_FILE*}'
+compress.cpp:34:21: error: invalid user-defined conversion from 'std::ifstream {aka std::basic_ifstream<char>}' to 'FILE* {aka _IO_FILE*}' [-fpermissive]
+     fclose(inputFile);
+                     ^
+In file included from /software/common/gcc-4.8.1/include/c++/4.8.1/ios:44:0,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/istream:38,
+                 from /software/common/gcc-4.8.1/include/c++/4.8.1/fstream:38,
+                 from HCTree.hpp:6,
+                 from compress.cpp:1:
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note: candidate is: std::basic_ios<_CharT, _Traits>::operator void*() const [with _CharT = char; _Traits = std::char_traits<char>] <near match>
+       operator void*() const
+       ^
+/software/common/gcc-4.8.1/include/c++/4.8.1/bits/basic_ios.h:115:7: note:   no known conversion for implicit 'this' parameter from 'void*' to 'FILE* {aka _IO_FILE*}'
+compress.cpp:17:12: warning: unused variable 'fileSize' [-Wunused-variable]
+     size_t fileSize = ftell(inputFile);
+            ^
+make: *** [build/compress.o] Error 1

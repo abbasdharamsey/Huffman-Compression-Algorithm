@@ -1,0 +1,24 @@
+PA2 Abbas Dharamsey
+
+This is my Huffman Compression Algorithm. It works in conjunction with two programs: compress, and uncompress. You will need the standard G++ compiler to run this program.
+
+All of the code that defines how the Huffman Tree operates can be found the the HCNode and HCTree corresponding .cpp and .hpp files. All of the code that defines the bit input and output streams can be found in the BitInputStream and BitOutputStream corresponding .cpp and .hpp files.
+
+compress takes two parameters, the name of the file you want to compress and the name you want to call the compressed file.
+
+To compress a file, enter these commands in the terminal:
+
+1. Make Clean
+2. Make
+3. ./compress (file name you want to compress) (name that you want the compressed file to be titled)
+
+
+
+decompress takes two parameters as well, the name of the file you want to uncompress and the name you want to call the uncompressed file.
+
+To decompress a file, enter these commands in the terminal:
+
+1. If not already, enter ‘Make’.
+2. ./uncompress (file name you want to uncompress) (name that you want the uncompressed file to be titled)
+
+
